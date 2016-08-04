@@ -1,0 +1,12 @@
+firebaseStorage = require('./lib/storage/firebase_stograge.js')({
+	databaseURL: 'https://htktest-8f8c3.firebaseio.com',
+	rojectId: "htktest-8f8c3",
+  clientEmail: "htktest@htktest-8f8c3.iam.gserviceaccount.com",
+  privateKey: "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCOm08Y8d6n1g5N\nHUZW7kLqK0+AKD4N5Nnu1XBWH4VGUZhraxekeG5RM+py4xoP+YP1UV75mJOjX1XQ\nfvAwYuI8oEf/yTyBVH2oYPPQXLrtYFu3fzfm5QA+LY0sxqynsvjzJKTQ9DLASlw6\nOYqW8PwjnRRPBB/ctbw4x5rxmozbsQMGOq01lhYAmTswdPHU6CjS8HNi70ubOSG9\nsR8CQWFkk3+9jt2qjoe7heAbSlNuplmfpbm/Qeo32YVa0SPmCe4oHskUQMvgWW7H\nikewOvAc9MfsKbZQIZP+Gg4+waDOq1b3i8sWUlWrqSzBiBii+N3sG1XAce9s+Phi\npl3aRWV/AgMBAAECggEAM/o5rz7hR81Gcyb7b03yh8V3eZ+xVoEWSe3zvwBIJGQz\nKNvkxya6FtDUYEGUS0RHq4+YDWNmVIK4FYFe7FPuX+iPtZRUgFMaZdfIpiZWX5Ti\neRRefML0/rS9oxda8NjT0lOF2z9WjC3ORc6ZTADT9esX7uDy+BApZYyjVfJd6uih\n/NRwOK+n2Lllbtze/RlMKpmysejKKyQBTptEtZFM4zlvKH90Z2EO6oXWbx05URnf\nLntQAqMqZ/HOlJuCDAARATT0vrFiMNWyt/3hJxzBUlkY4rujm0Y6AP2lwHC2JeTN\nQYV0Iq344Ykf84JPfAj0CgatLWzEu3Fjc4yY7vRpwQKBgQDdtFGhrH6PtNGuVu9A\nLZoPQs2qC/cfShTtJB1uPQEjIzif9MOr569koG7SoMxLfgbUdonpvtoxe5Pm/lFl\nzTTXovFDISl2pzK4mhs60NCzMvvpeBslj+VRq4AX4imwjwaxbumt9u9z5LwViqSF\nxmRHI1pLW4nwoTw2WeFSCJcE4QKBgQCkqqd/of/zsT8kE4fhwJgsfZYDjHQSrq27\nyjc9vs9SmftvHa1x1zfvos28vHW7OSeU7rHsCcJjVxbaqYLlqMBfKHFlM6kTi94A\nLrwgVclhQ+1d8jPbfjr7EqfzchkKmHTeOU7mIbB1C96NlAoXUlXknLhuvM8F0DSA\nZHyB6ndWXwKBgDxUl2oxcHdWs0CH8685OZUxjpnZi7P+CtfFXiTjgO245e3RQ3YC\nJB5z8fRrQWzBrMYgQ8NR5jpU8JiJWEkloF2Vv6WO3qOlOA44EXTd4g0BsL+FqY19\nLOAelUrqhoG/Sgj6r6hhbCPTeMM76S1mIV+iZS3giRbsKWB48PHL2JzBAoGBAJBS\ngjv7YLnVv+F+vLnAc5+K8tBpadJ2Bw9wTLpxYoSjMRxShpIgb4Y4ytmA1C8kCO0f\nyBF4/EbVLdK4f2GKZhEBAWIRxT68d/bw/zHX/oihYInWnlziZg9oaouUlR4UQVoE\nIILTRDVSEd1EwxNttpqIQZ3NHiWaNmnRqM61EaNBAoGBAKkONotoDXZ1ieREEP5i\nPfGJDJpF81vYYf7YW99JZHrYrF7tY75jwf4Y/7Zm+6TAgQYeGiCmrHbY0RsR5tBi\nU/zzmZgBD5c0RXh5zQwRB6hO5KjXFmGjbYP5A+tocTnVGfH5Bw7k9kMnPb9NJOug\nKPpuiZI/B0zMuLsPqubcEw9p\n-----END PRIVATE KEY-----\n"
+})
+
+require('skellington')({
+  slackToken: 'xoxb-60591206918-kjdJHzsJvJqfWcV5bPLGubPs',
+  plugins: [require('./plugins/pluginlist.js')], 
+  storage: firebaseStorage 
+});
